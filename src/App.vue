@@ -17,13 +17,13 @@ const todos_asc = computed(() => todos.value.sort((a, b) => {
 const addTodo = () => {
   if (input_content.value.trim() === '' || input_category.value === null)
     return
-
-    todos.value.push({
-      content: input_content.value,
-      category: input_category.value,
-      done: false,
-      createdAt: new Date().getTime()
-    })
+  
+  todos.value.push({
+    content: input_content.value,
+    category: input_category.value,
+    done: false,
+    createdAt: new Date().getTime()
+  })
 }
 
 watch(todos, newVal => {
@@ -59,16 +59,16 @@ onMounted(() => {
         <input 
           type="text" 
           placeholder="e.g STUDY!!!"
-          :model="input_content" />
+          v-model="input_content" />
 
         <h4>Pick a category</h4>
         <div class="options">
           <label>
             <input 
               type="radio" 
-              name="category" 
+              name="category"
               value="business"
-              :model="input_category" />
+              v-model="input_category" />
             <span class="bubble business"></span>
             <div>Business</div>
           </label>
@@ -78,13 +78,13 @@ onMounted(() => {
               type="radio" 
               name="category" 
               value="personal"
-              :model="input_category" />
+              v-model="input_category" />
             <span class="bubble personal"></span>
             <div>Personal</div>
           </label>
         </div>
 
-        <input type="submit" value="Add todo"/>
+        <input type="submit" value="Add todo" />
       </form>
     </section>
   </main>
