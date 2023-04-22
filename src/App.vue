@@ -29,7 +29,7 @@ const addTodo = () => {
   input_category.value = null
 }
 
-const removeTodo = () => {
+const removeTodo = (todo) => {
   todos.value = todos.value.filter(td => td!==todo )
 }
 
