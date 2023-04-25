@@ -1,3 +1,3 @@
-# TODO List / Vue 3 + Vite
+# ToDo List / Vue 3 + Vite
 
 Learning Vue
